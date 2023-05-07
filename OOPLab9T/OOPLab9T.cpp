@@ -2,10 +2,48 @@
 //
 
 #include <iostream>
+#include "Task_1.cpp"
+#include "Task_2.cpp"
+#include "Task_3.cpp"
 
 int main()
 {
-    std::cout << "Lab №9. STL. \n";
+	system("chcp 1251");
+	std::wcout.imbue(std::locale(""));
+	system("cls");
+
+	char n;
+   
+	while (true)
+	{
+		std::cout << "Lab №9. STL. \n";
+		std::cout << "Lab 8 \n";
+		std::cout << "1 - Task 1.\n";
+		std::cout << "2 - Task 2.\n";
+		std::cout << "3 - Task 3.\n";
+		std::cout << "r - exit.\n";
+		std::cin >> n;
+		switch (n)
+		{
+		case '1':
+			Task1();
+			break;
+		case '2':
+			Task2();
+			break;
+		case '3':
+			Task3();
+			break;		
+		case 'r':
+			return 0;
+		}
+
+		std::cout << "\nPrass 'r' for exit.\n";
+		std::cout << "Prass random key for starting now.\n";
+		std::cin >> n;
+		if (n == 'r') return 0;
+		system("cls");
+	}
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
